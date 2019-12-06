@@ -17,7 +17,7 @@
   <div class="container-md">
     <!--нечетная неделя-->
     <div class="row justify-content-center">
-      <button type="button" class="btn btn-mycolor1 col-12 btn-block text-white" data-toggle="collapse" data-target="#timetableOdd">Нечетная неделя <span class="badge badge-warning">Now!</span></button>
+      <button type="button" class="btn btn-mycolor1 col-12 btn-block text-white" data-toggle="collapse" data-target="#timetableOdd" id="buttonOdd">Нечетная неделя</button>
     </div>
     <div class="row justify-content-center">
       <div class="collapse table-responsive-sm" id="timetableOdd">
@@ -152,7 +152,7 @@
     </div>
     <!--четная неделя-->
     <div class="row justify-content-center">
-      <button type="button" class="btn btn-primary col-12 btn-block" data-toggle="collapse" data-target="#timetableEven">Четная неделя</button>
+      <button type="button" class="btn btn-primary col-12 btn-block" data-toggle="collapse" data-target="#timetableEven" id="buttonEven">Четная неделя</button>
     </div>
     <div class="row justify-content-center">
       <div class="collapse table-responsive-sm" id="timetableEven">
@@ -284,6 +284,19 @@
     <!-- Optional JavaScript -->
     <script>
       //Jquery Автоматизация
+      function weekType(){
+        let createUniv = 1573419600921 / 1000 / 60 / 60 / 24;
+        let todayDate = new Date().getTime()/1000/60/60/24;
+        if (Math.floor(Math.floor((todayDate-createUniv)/7)+1)%2==0){
+          $("#buttonEven").html("Четная неделя <span class='badge badge-warning'>Now!</span>");
+          $("#buttonOdd").html("Нечетная неделя");
+        }
+        else {
+          $("#buttonEven").html("Четная неделя");
+          $("#buttonOdd").html("Нечетная неделя <span class='badge badge-warning'>Now!</span>");
+        }
+            }
+        setInterval(() => weekType(), 100);
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
