@@ -1,0 +1,15 @@
+.btn-mycolor1 {
+  background-color: #480eb8;
+  border-color:#480eb8;
+}
+.btn-mycolor1:hover{
+  background-color: #370b8b;
+  border-color: rgba(72, 14, 184, 0.5);
+}
+.btn-mycolor1:focus{
+  background-color: #370b8b;
+  box-shadow: 0 0 0 0.2rem rgba(72, 14, 184, 0.5);
+}
+.table-mycolor1{
+  background-color: #9e88e1
+}

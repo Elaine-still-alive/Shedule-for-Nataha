@@ -8,6 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 
   <title>Расписание Д-206</title>
 </head>
@@ -16,15 +17,13 @@
   <div class="container-md">
     <!--нечетная неделя-->
     <div class="row justify-content-md-center">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th colspan="4" class="text-white bg-danger text-center">Нечетная неделя</th>
-        </tr>
-      </thead>
-      <tbody>
+      <button type="button" class="btn btn-mycolor1 btn-lg btn-block text-white" data-toggle="collapse" data-target="#timetableOdd">Нечетная неделя  <span class="badge badge-warning">Now!</span></button>
+    </div>
+    <div class="row justify-content-md-center">
+      <table class="table table-bordered collapse" id="timetableOdd">
+        <tbody>
           <tr>
-            <th colspan="4" class="table-danger">Понедельник</th>
+            <th colspan="4" class="table-mycolor1">Понедельник</th>
           </tr>
           <tr>
             <th>9:00-10:35</th>
@@ -34,7 +33,7 @@
           </tr>
           <tr>
             <th>10:55-11:40</th>
-            <td>лек.Науки о земле</td>
+            <td>лек.Науки о земле (геология, география, почвоведение)</td>
             <td>17-БП</td>
             <td>Каменных Н.Л.</td>
           </tr>
@@ -45,7 +44,7 @@
             <td>Ксенофонтов Д.А.</td>
           </tr>
           <tr>
-            <th colspan="4" class="table-danger">Вторник</th>
+            <th colspan="4" class="table-mycolor1">Вторник</th>
           </tr>
           <tr>
             <th>9:00-10:35</th>
@@ -72,7 +71,7 @@
             <td>Григорьева М.В./Старых С.Э.</td>
           </tr>
           <tr>
-            <th colspan="4" class="table-danger">Cреда</th>
+            <th colspan="4" class="table-mycolor1">Cреда</th>
           </tr>
           <tr>
             <th>9:00-10:35</th>
@@ -99,7 +98,7 @@
             <td>Пыхов С.Г./Матушкина К.А.</td>
           </tr>
           <tr>
-            <th colspan="4" class="table-danger">Четверг</th>
+            <th colspan="4" class="table-mycolor1">Четверг</th>
           </tr>
           <tr>
             <th>9:00-10:35</th>
@@ -120,7 +119,7 @@
             <td>Ромашкин К.И.</td>
           </tr>
           <tr>
-            <th colspan="4" class="table-danger">Пятница</th>
+            <th colspan="4" class="table-mycolor1">Пятница</th>
           </tr>
           <tr>
             <th>9:00-10:35</th>
@@ -136,7 +135,7 @@
           </tr>
           <tr>
             <th>13:00-14:35</th>
-            <td>пр.Науки о земле</td>
+            <td>пр.Науки о земле (геология, география, почвоведение)</td>
             <td>17-П215/17-П217</td>
             <td>Каменных Н.Л./Поляков А.М.</td>
           </tr>
@@ -146,18 +145,16 @@
             <td>17-Б407/17-Б403</td>
             <td>Козловская Л.Н./Чичев А.В.</td>
           </tr>
-      </tbody>
-    </table>
+        </tbody>
+      </table>
     </div>
     <!--четная неделя-->
     <div class="row justify-content-md-center">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th colspan="4" class="text-white bg-info text-center">Четная неделя</th>
-        </tr>
-      </thead>
-      <tbody>
+      <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#timetableEven">Четная неделя</button>
+    </div>
+    <div class="row justify-content-md-center">
+      <table class="table table-bordered collapse" id="timetableEven">
+        <tbody>
           <tr>
             <th colspan="4" class="table-info">Понедельник</th>
           </tr>
@@ -169,7 +166,7 @@
           </tr>
           <tr>
             <th>10:55-11:40</th>
-            <td>лек.Науки о земле</td>
+            <td>лек.Науки о земле (геология, география, почвоведение)</td>
             <td>17-БП</td>
             <td>Каменных Н.Л.</td>
           </tr>
@@ -271,12 +268,12 @@
           </tr>
           <tr>
             <th>13:00-14:35</th>
-            <td>пр.Науки о земле</td>
+            <td>пр.Науки о земле (геология, география, почвоведение)</td>
             <td>17-П215/17-П217</td>
             <td>Каменных Н.Л./Поляков А.М.</td>
           </tr>
-      </tbody>
-    </table>
+        </tbody>
+      </table>
     </div>
   </div>
 
