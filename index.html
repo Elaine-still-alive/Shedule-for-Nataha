@@ -466,21 +466,22 @@
       }
       $("#dayTimetableBD").html(``) //Очищяем ячейки с актуальным расписанием на сегоднешний день.
       //Заполняем само рассписание
-      if ((day = 6) || (day = 0) || (day = 1)) {
+      if ((day = 6) || (day = 0)) {
         if (weekBool) {
+          for (var i = 0; i < shedule.chet[0].length; i++) {
+           $("#dayTimetableBD").html(`${$("#dayTimetableBD").html()}<tr>
+          <th>${shedule.chet[0][i].time}</th>
+          <td>${shedule.chet[0][i].subject}</td>
+          </tr>`);
+         }
+        } else {
           for (var i = 0; i < shedule.nechet[0].length; i++) {
             $("#dayTimetableBD").html(`${$("#dayTimetableBD").html()}<tr>
           <th>${shedule.nechet[0][i].time}</th>
           <td>${shedule.nechet[0][i].subject}</td>
         </tr>`);
           }
-        } else {
-          for (var i = 0; i < shedule.chet[0].length; i++) {
-            $("#dayTimetableBD").html(`${$("#dayTimetableBD").html()}<tr>
-           <th>${shedule.chet[0][i].time}</th>
-           <td>${shedule.chet[0][i].subject}</td>
-           </tr>`);
-          }
+
         }
       } else {
         if (weekBool) {
