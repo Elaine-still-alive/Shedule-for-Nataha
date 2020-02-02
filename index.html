@@ -8,7 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" id="styleLink" href="css/styles.css">
 
   <title>Расписание Д-206</title>
 </head>
@@ -54,6 +54,15 @@
       </table>
     </div>
   </div>
+  <div class = container>
+    <div class="row justify-content-center">
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="customSwitch">
+      <label class="custom-control-label" for="customSwitch">Темная тема</label>
+    </div>
+  </div>
+  </div>
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -469,11 +478,11 @@
       if ((day = 6) || (day = 0)) {
         if (weekBool) {
           for (var i = 0; i < shedule.chet[0].length; i++) {
-           $("#dayTimetableBD").html(`${$("#dayTimetableBD").html()}<tr>
+            $("#dayTimetableBD").html(`${$("#dayTimetableBD").html()}<tr>
           <th>${shedule.chet[0][i].time}</th>
           <td>${shedule.chet[0][i].subject}</td>
           </tr>`);
-         }
+          }
         } else {
           for (var i = 0; i < shedule.nechet[0].length; i++) {
             $("#dayTimetableBD").html(`${$("#dayTimetableBD").html()}<tr>
@@ -502,6 +511,15 @@
       }
     }
     setInterval(() => weekType(), 100);
+
+    //Смена css стилей страницы
+    $("#customSwitch").click(() => {
+      if($("#customSwitch").prop('checked')) {
+        $("#styleLink").attr("href", "css/dark_theme_styles.css");
+      } else {
+        $("#styleLink").attr("href", "css/styles.css");
+      }
+    });
   </script>
 </body>
 

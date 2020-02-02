@@ -1,0 +1,39 @@
+.btn-mycolor1{
+  background-color: #480eb8;
+  border-color:#480eb8;
+}
+.btn-mycolor1:hover{
+  background-color: #370b8b;
+  border-color: rgba(72, 14, 184, 0.5);
+}
+.btn-mycolor1:focus{
+  background-color: #370b8b;
+  box-shadow: 0 0 0 0.2rem rgba(72, 14, 184, 0.5);
+}
+.table-mycolor1{
+  background-color: #9e88e1;
+}
+.row{
+  padding-top: 0.5rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+#dayTimetasble {
+  padding-top: 5rem;
+}
+body {
+  background-color: #121212;
+}
+.table {
+  color:#bbb9c6;
+  background-color: #232424;
+}
+.table-primary{
+color: black;
+}
+table-mycolor1{
+  color: black;
+}
+.custom-control-label {
+  color: #bbb9c6;
+}
